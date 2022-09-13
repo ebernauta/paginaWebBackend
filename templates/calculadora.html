@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/calculadora.css')}}"> <!--Esta linea hace reconocimiento en flask de la conexion con css-->
+    <link rel="stylesheet" href="/static/css/calculadora.css"> <!--Esta linea de codigo reconoce el .css directamente del html-->
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <form action="calcular" method="POST">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2">
+                    <label for="floatingInput">Numero 1</label>
+                    <input type="text" name="input1">
+                    <label for="floatingInput">Numero 2</label>
+                    <input type="text" name="input2">
+                </div>
+            </div>
+            <input type="radio" name="sumar" id="sumar" checked>
+            <label for="sumar">Sumar</label>
+            <input type="radio" name="restar" id="restar">
+            <label for="restar">Restar</label>
+            <input type="radio" name="multiplicar" id="multiplicar">
+            <label for="multiplicar">Multiplicar</label>
+            <input type="radio" name="dividir" id="dividir">
+            <label for="dividir">Dividir</label>
+        </div>
+        <button class="btn m-4 btn-outline-primary" name="boton-calcular">Calcular</button>
+        
+    </form> 
+</body>
+</html>

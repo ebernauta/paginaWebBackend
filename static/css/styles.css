@@ -1,0 +1,19 @@
+body {
+    background-color: rgb(69, 67, 67);
+}
+
+div.col {
+    background-color: rgba(0, 0, 0, 0.565);
+    margin: auto;
+    margin-top: 170px;
+    padding-bottom: 80px;
+    padding-top: 270px;
+    margin-left: 190px;
+    margin-right: 190px;
+}
+
+h1.title {
+    color: aliceblue;
+    margin: auto ;
+    margin-bottom: 180px;
+} 

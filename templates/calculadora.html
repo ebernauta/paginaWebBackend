@@ -21,17 +21,19 @@
                     <input type="text" name="input2">
                 </div>
             </div>
-            <input type="radio" name="sumar" id="sumar" checked>
+            <input type="radio" name="operacion" value="sumar" checked>
             <label for="sumar">Sumar</label>
-            <input type="radio" name="restar" id="restar">
+            <input type="radio" name="operacion" value="restar">
             <label for="restar">Restar</label>
-            <input type="radio" name="multiplicar" id="multiplicar">
+            <input type="radio" name="operacion" value="multiplicar">
             <label for="multiplicar">Multiplicar</label>
-            <input type="radio" name="dividir" id="dividir">
+            <input type="radio" name="operacion" value="dividir">
             <label for="dividir">Dividir</label>
+            <div class="container m-5">
+                <h1>Resultado {{valor}}</h1>
+            </div>
         </div>
         <button class="btn m-4 btn-outline-primary" name="boton-calcular">Calcular</button>
-        
     </form> 
 </body>
 </html>

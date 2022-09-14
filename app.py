@@ -18,11 +18,24 @@ def calculadoraWeb():
 def calcular():
     a = request.form["input1"]
     b = request.form["input2"]
-    #operacion = request.form["operacion"]
-    #filtro para saber que opcion eligió (sumar - restar - multiplicar - dividir) para despues hacer
-    #los calculos 
-    valores = mainCalculadora.calculos.sumar(a,b)
-    return f"La operacion es: {valores}"
+    operacion = request.form["operacion"]
+    
+    if operacion == "sumar":
+        valores = mainCalculadora.calculos.sumar(a, b)
+        return render_template("calculadora.html", valor=valores)
+    elif operacion == "restar":
+        valores = mainCalculadora.calculos.restar(a, b)
+        return render_template("calculadora.html", valor=valores)
+    elif operacion == "multiplicar":
+        valores = mainCalculadora.calculos.multiplicar(a, b)
+        return render_template("calculadora.html", valor=valores)
+    elif operacion == "dividir":
+        valores = mainCalculadora.calculos.dividir(a, b)
+        return render_template("calculadora.html", valor=valores)
+    else:
+        return "Vaya algo salió mal !"
+    
+    return redirect("calcular")
 
 
 app.run(debug= True)
